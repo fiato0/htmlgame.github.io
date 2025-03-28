@@ -1,10 +1,9 @@
 var canvas = document.getElementById("canvas");
 var canvasContext = canvas.getContext("2d");
-var canvas = document.getElementById("canvas");
-var canvasContext = canvas.getContext("2d");
 var drawStatus;
 var slimeList = [];
 var k = 0;
+
 
 var PLAYER = {
   x: 400,
@@ -15,12 +14,6 @@ var PLAYER = {
   yDirection: 50,
   radius: 5,
   playerImage: new Image(),
-};
-
-var BORDER = {
-  widthLeft: 40,
-  widthRight: 910,
-  height: 710,
 };
 
 var HEARTS = {
@@ -168,7 +161,7 @@ function getRandomInt(min, max) {
 
 function newSlimesFunc() {
   var newSlime = {
-    x: getRandomInt(50, 820),
+    x: getRandomInt(60, 820),
     y: 60,
     width: 50,
     height: 50,
@@ -313,7 +306,6 @@ function DrawRestartFrame() {
 }
 
 function ClickPlay(event) {
-  // console.log(event.x, event.y)
   if (isOnPlayButton(event)) {
     console.log("meow")
     play();
@@ -322,7 +314,6 @@ function ClickPlay(event) {
 
 function play() {
   console.log(slimeList)
-  // console.log(PLAYER.x, PLAYER.y)
   DrawMainFrame();
   bulletSlime();
   drawStatus = requestAnimationFrame(play);
@@ -344,19 +335,10 @@ function play() {
       cancelAnimationFrame(drawStatus)
       k = 0
       Res();
-      PLAYER.x = playerX
-      PLAYER.y = playerY
-      for (var i = 0; i < slimeList.length; i++) {
-      slimeList[i] = 0;
-
-      }
-    if (slimeList.length > 10.000) {
-
     }
-
   }
 }
-}
+
 
 function Play () {
   DrawPlayFrame();
