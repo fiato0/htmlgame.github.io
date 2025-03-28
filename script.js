@@ -5,8 +5,6 @@ var canvasContext = canvas.getContext("2d");
 var drawStatus;
 var slimeList = [];
 var k = 0;
-const playerX = 400;
-const playerY = 640;
 
 var PLAYER = {
   x: 400,
@@ -170,7 +168,7 @@ function getRandomInt(min, max) {
 
 function newSlimesFunc() {
   var newSlime = {
-    x: getRandomInt(40, 820),
+    x: getRandomInt(50, 820),
     y: 60,
     width: 50,
     height: 50,
