@@ -335,6 +335,7 @@ function play() {
       cancelAnimationFrame(drawStatus)
       k = 0
       Res();
+
     }
   }
 }
